@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Challan - Generate Challan</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Back Button -->
+    <a href="../../index.html" class="back-btn">Back</a>
+
+    <section id="generate-challan">
+        <div class="container">
+            <h2 class="section-title">Generate Your Fee Challan</h2>
+            <p class="section-subtitle">Fill out the details below to generate your fee challan.</p>
+
+            <div class="challan-form">
+                <form id="challan-form">
+                    <!-- Student Details -->
+                    <div class="input-group">
+                        <label for="student-name">Student Name</label>
+                        <input type="text" id="student-name" name="student-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="institution">Institution Name</label>
+                        <input type="text" id="institution" name="institution" required>
+                    </div>
+
+                    <!-- Fee Details -->
+                    <div class="input-group">
+                        <label for="fee-amount">Fee Amount (INR)</label>
+                        <input type="number" id="fee-amount" name="fee-amount" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date" name="due-date" required>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button type="submit" class="cta-btn">Generate Challan</button>
+                </form>
+            </div>
+
+            <!-- Generated Challan Display -->
+            <div id="challan-display" class="challan-display" style="display: none;">
+                <h3>Your Fee Challan</h3>
+                <p><strong>Name:</strong> <span id="challan-name"></span></p>
+                <p><strong>Institution:</strong> <span id="challan-institution"></span></p>
+                <p><strong>Fee Amount:</strong> ₹<span id="challan-fee"></span></p>
+                <p><strong>Due Date:</strong> <span id="challan-date"></span></p>
+                <p><strong>Email:</strong> <span id="challan-email"></span></p>
+                <p><strong>Phone:</strong> <span id="challan-phone"></span></p>
+
+                <div class="challan-buttons">
+                    <button class="reset-btn" id="reset-btn">Generate New Challan</button>
+                    <button class="print-btn" id="print-btn">Print Challan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
