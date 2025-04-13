@@ -2,78 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fee Challan - Generate Challan</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fee Challan - Generate Challan</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
 
-    <!-- Back Button -->
-    <a href="../../index.html" class="back-btn">Back</a>
+  <header>
+    <div class="logo">FeeChallan</div>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../index.html">How It Works</a></li>
+        <li><a href="../../index.html">Features</a></li>
+        <li><a href="../../index.html">Contact</a></li>
+      </ul>
+    </nav>
 
-    <section id="generate-challan">
-        <div class="container">
-            <h2 class="section-title">Generate Your Fee Challan</h2>
-            <p class="section-subtitle">Fill out the details below to generate your fee challan.</p>
+    <a href="../sign-up/login.html" class="cta-btn1">Login</a>
 
-            <div class="challan-form">
-                <form id="challan-form">
-                    <!-- Student Details -->
-                    <div class="input-group">
-                        <label for="student-name">Student Name</label>
-                        <input type="text" id="student-name" name="student-name" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="institution">Institution Name</label>
-                        <input type="text" id="institution" name="institution" required>
-                    </div>
+  </header>
 
-                    <!-- Fee Details -->
-                    <div class="input-group">
-                        <label for="fee-amount">Fee Amount (INR)</label>
-                        <input type="number" id="fee-amount" name="fee-amount" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" id="due-date" name="due-date" required>
-                    </div>
+  <section id="generate-challan">
+    <div class="container">
+      <h2 class="section-title">Generate Your Fee Challan</h2>
+      <p class="section-subtitle">Fill out the details below to generate your fee challan.</p>
 
-                    <!-- Contact Details -->
-                    <div class="input-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
+      <div class="challan-form">
+        <form id="challan-form">
+          <!-- Student Details -->
+          <div class="input-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" name="student-name" required>
+          </div>
+          <div class="input-group">
+            <label for="institution">Institution Name</label>
+            <input type="text" id="institution" name="institution" required>
+          </div>
 
-                    <!-- Generate Button -->
-                    <button type="submit" class="cta-btn">Generate Challan</button>
-                </form>
-            </div>
+          <!-- Fee Details -->
+          <div class="input-group">
+            <label for="fee-amount">Fee Amount (INR)</label>
+            <input type="number" id="fee-amount" name="fee-amount" required>
+          </div>
+          <div class="input-group">
+            <label for="due-date">Due Date</label>
+            <input type="date" id="due-date" name="due-date" required>
+          </div>
 
-            <!-- Generated Challan Display -->
-            <div id="challan-display" class="challan-display" style="display: none;">
-                <h3>Your Fee Challan</h3>
-                <p><strong>Name:</strong> <span id="challan-name"></span></p>
-                <p><strong>Institution:</strong> <span id="challan-institution"></span></p>
-                <p><strong>Fee Amount:</strong> ₹<span id="challan-fee"></span></p>
-                <p><strong>Due Date:</strong> <span id="challan-date"></span></p>
-                <p><strong>Email:</strong> <span id="challan-email"></span></p>
-                <p><strong>Phone:</strong> <span id="challan-phone"></span></p>
+          <!-- Contact Details -->
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
 
-                <div class="challan-buttons">
-                    <button class="reset-btn" id="reset-btn">Generate New Challan</button>
-                    <button class="print-btn" id="print-btn">Print Challan</button>
-                </div>
-            </div>
+          <!-- Generate Button -->
+          <button type="submit" class="cta-btn">Generate Challan</button>
+          <button type="button" id="reset-btn1" class="reset-btn1">Reset</button>
+        </form>
+      </div>
+
+      <!-- Generated Challan Display -->
+      <div id="challan-display" class="challan-display" style="display: none;">
+        <h3>Your Fee Challan</h3>
+        <p><strong>Name:</strong> <span id="challan-name"></span></p>
+        <p><strong>Institution:</strong> <span id="challan-institution"></span></p>
+        <p><strong>Fee Amount:</strong> ₹<span id="challan-fee"></span></p>
+        <p><strong>Due Date:</strong> <span id="challan-date"></span></p>
+        <p><strong>Email:</strong> <span id="challan-email"></span></p>
+        <p><strong>Phone:</strong> <span id="challan-phone"></span></p>
+
+        <div class="challan-buttons">
+          <button class="reset-btn" id="reset-btn">Generate New Challan</button>
+          <button class="print-btn" id="print-btn">Print Challan</button>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="./script.js"></script>
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="container-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Fee Challan</h2>
+          <p>Your trusted platform for fee challan generation.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html">Features</a></li>
+            <li><a href="../../index.html">Contact</a></li>
+            <li><a href="../../index.html">Testimonals</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul>
+            <li> <a href="#" class="fa fa-facebook"></a></li>
+            <li> <a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fee Challan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 
 </body>
 
